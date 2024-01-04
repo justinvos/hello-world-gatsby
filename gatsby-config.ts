@@ -23,7 +23,7 @@ const config: GatsbyConfig = {
       path: `${__dirname}/blog/`,
     },
     __key: "blog"
-  },]
+  },'gatsby-plugin-postcss',]
 };
 
 export default config;

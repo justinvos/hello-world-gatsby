@@ -1,6 +1,7 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from "gatsby"
 import { useStaticQuery, graphql } from 'gatsby';
+import { Layout } from '../../components/layout';
 
 
 const BlogPost = (props: PageProps) => {
@@ -18,7 +19,9 @@ const BlogPost = (props: PageProps) => {
   `);
 
   return (
-    <h1>{data.mdx.frontmatter.title}.</h1>
+    <Layout>
+      <h1>{data.mdx.frontmatter.title}.</h1>
+    </Layout>
   )
 }
 export const Head: HeadFC = () => <title>Home Page</title>
